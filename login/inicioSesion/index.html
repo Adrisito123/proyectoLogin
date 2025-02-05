@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="fondo">
+        <div class="iniciarSesion">Iniciar Sesión</div>
+        <form action="login.php" method="post">
+            <div class="usuario">
+                <img src="../img/usuario.png" class="iconoUser">Usuario :    
+                <input type="text" placeholder="Ingrese Usuario" class="user" name="uname" required>
+            </div>
+            <div class="pass">
+                <img src="../img/candado.png" class="candado">Contraseña :
+                <input type="password" placeholder="Ingrese Contraseña" class="contra" name="psw" required>
+            </div>
+            <div class="enviar">
+                <input type="submit" class="login" value="Login">
+            </div>
+            <div class="borrar">
+                <input type="reset" class="reset" value="Borrar">
+            </div>
+        </form>
+        <div class="nombreCrearCuneta"><b>¿No tienes una cuenta?</b></div>
+        <div class="crearCuenta">
+                <button onclick="window.location.href='../crearCuenta/register.html'" class="register">Crear Cuenta</button>
+        </div>
+        <div class="persona1">
+            <img src="../img/negocio.png" class="persona1">
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        if (urlParams.has('error')) {
+            alert('Usuario o contraseña incorrectos');
+        }
+        if (urlParams.has('success')) {
+            alert('Cuenta creada exitosamente');
+        }
+    </script>
+</body>
+</html>

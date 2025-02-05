@@ -1,0 +1,166 @@
+body{
+    width: 100%; 
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    background: -webkit-linear-gradient(90deg,#250055,#5200a3,#6600ff,#3e00b3,#070055); /* Chrome 10-25, Safari 5.1-6 */ background: linear-gradient(90deg,#250055,#5200a3,#6600ff,#3e00b3,#070055); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: relative;
+}
+
+.iniciarSesion{
+    position: relative;
+    top: -0px;
+    color: black;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+    font-weight: bold;
+    padding: 20px;
+    background-color: darkcyan;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: goldenrod;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+.usuario{
+    background-color: aquamarine;
+    padding: 40px;
+    color: black;
+    position: relative;
+    top: 30px;
+    font-size: 20px;
+    width: 200px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+    border-style: outset;
+    left: 110px;
+    text-align: center;
+}
+
+.pass{
+    background-color: aquamarine;
+    padding: 40px;
+    color: black;
+    text-align: center;
+    position: relative;
+    top: 50px;
+    font-size: 20px;
+    width: 200px;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 10px;
+    border-style: outset;
+    left: 110px;
+}
+
+.user{
+    background-color: aquamarine;
+    position: relative;
+    border: none;
+    top: 0px;
+    left: 20px;
+    outline: none;
+    border: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    text-align: left;
+}
+
+.contra{
+    background-color: aquamarine;
+    position: relative;
+    border: none;
+    top: 0px;
+    left: 20px;
+    outline: none;
+    border: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    text-align: left;
+}
+
+.login, .reset{
+    position: relative;
+    top: 100px;
+    left: 300px;
+    padding: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: darkcyan;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: goldenrod;  
+    width: 150px;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.login:hover, .reset:hover , .register:hover{
+    transform: scale(1.1);
+    background-color: darkslategray;
+}
+
+.reset{
+    top: 20px;
+    left: 40px;
+}
+
+.fondo{
+    position: relative;
+    padding: 40px;
+    width: 500px;
+    height: 600px;
+    box-shadow: 2px 2px 8px 0 rgb(212, 230, 252), 4px 4px 16px 0 rgb(156, 233, 255), 0px 0px 24px 2px rgb(255, 255, 255);
+    background-color: wheat;
+}
+
+.persona1{
+    position: absolute;
+    height: 400px;
+    top: 140px;
+    left: 250px;
+}
+
+.candado{
+    position: absolute;
+    height: 40px;
+    top: 45px;
+    left: 5px;
+}
+
+.iconoUser{
+    position: absolute;
+    height: 40px;
+    top: 45px;
+    left: 5px;
+}
+.nombreCrearCuneta{
+    position: absolute;
+    top: 630px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.register{
+    position: absolute;
+    top: 620px;
+    left: 290px;
+    padding: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: darkcyan;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: goldenrod;  
+    width: 150px;
+    transition: transform 0.3s, background-color 0.3s;
+}

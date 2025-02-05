@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar Usuarios</title>
+    <link rel="stylesheet" type="text/css" href="admin_styles.css">
+</head>
+<body>
+    <div class="fondo">
+        <div class="iniciarSesion">Administrar Usuarios</div>
+        <div class="contenido">
+            <input type="text" id="searchInput" placeholder="Buscar usuario..." onkeyup="searchUser()">
+            <table id="usersTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Usuario</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se cargarán los usuarios desde la base de datos -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="admin_script.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+body {
+    width: 100%; 
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    background: -webkit-linear-gradient(90deg,#250055,#5200a3,#6600ff,#3e00b3,#070055); /* Chrome 10-25, Safari 5.1-6 */ 
+    background: linear-gradient(90deg,#250055,#5200a3,#6600ff,#3e00b3,#070055); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    position: relative;
+}
+
+.iniciarSesion {
+    position: relative;
+    top: -0px;
+    color: black;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+    font-weight: bold;
+    padding: 20px;
+    background-color: darkcyan;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: goldenrod;
+    animation: bounce 2s infinite;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+button {
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+button.edit {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button.delete {
+    background-color: #f44336;
+    color: white;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#searchInput:focus {
+    border-color: #3e00b3;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+#searchInput::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
