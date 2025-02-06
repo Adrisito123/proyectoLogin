@@ -68,44 +68,36 @@ header.cabecera h1 {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.bienvenida {
-    margin-top: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: left;
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
 }
 
-.bienvenida h2 {
-    margin-top: 0;
+.producto {
+    width: calc(33.333% - 20px);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: none;
+    cursor: pointer;
+}
+
+.producto img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.producto h3 {
+    margin: 10px 0;
     color: darkcyan;
 }
 
-.bienvenida ul {
-    list-style-type: disc;
-    padding-left: 20px;
-}
-
-.bienvenida ul li {
-    margin-bottom: 10px;
-}
-
-.cerrarSesion {
-    position: relative;
-    background-color: rgb(18, 0, 70);
-    color: white;
-    font-size: 20px;
-    padding: 5px 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 0px;
-    left: -30px;
-}
-
-.cerrarSesion:hover {
-    background-color: #3e00b3;
+.producto p {
+    margin: 10px 0;
 }
 
 .iconos {
@@ -131,61 +123,6 @@ header.cabecera h1 {
 .menuBusqueda {
     background: none;
     border: none;
-}
-
-footer.cabeceraFinal {
-    width: 100%;
-    background-color: darkcyan;
-    color: white;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 20px;
-}
-
-.contactaNosotros {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 20px;
-    text-align: center;
-}
-
-.contactaNosotros form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-}
-
-.contactaNosotros input[type="email"],
-.contactaNosotros textarea {
-    width: 100%;
-    max-width: 400px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.contactaNosotros .botones {
-    display: flex;
-    gap: 10px;
-}
-
-.contactaNosotros input[type="submit"],
-.contactaNosotros input[type="reset"] {
-    background-color: #3e00b3;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.contactaNosotros input[type="submit"]:hover,
-.contactaNosotros input[type="reset"]:hover {
-    background-color: #250055;
 }
 
 .searchPanel {
@@ -221,13 +158,4 @@ footer.cabeceraFinal {
 
 .searchPanel .closeSearchPanel:hover {
     background-color: #250055;
-}
-
-.confirmationMessage {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border-radius: 5px;
-    text-align: center;
 }

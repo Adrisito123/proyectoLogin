@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear Cuenta</title>
-    <link rel="stylesheet" type="text/css" href="register_styles.css">
+    <link rel="stylesheet" type="text/css" href="/crearCuenta/register_styles.css">
 </head>
 <body>
     <div class="fondo">
         <div class="iniciarSesion">Crear Cuenta</div>
         <form action="register.php" method="post">
             <div class="usuario">
-                <img src="../img/usuario.png" class="iconoUser">Usuario :    
+                <img src="/img/usuario.png" class="iconoUser">Usuario :    
                 <input type="text" placeholder="Ingrese Usuario" class="user" name="uname" required>
             </div>
             <div class="pass">
-                <img src="../img/candado.png" class="candado">Contraseña :
+                <img src="/img/candado.png" class="candado">Contraseña :
                 <input type="password" placeholder="Ingrese Contraseña" class="contra" name="psw" required>
             </div>
             <div class="enviar">
@@ -27,13 +27,13 @@
         </form>
         <div class="nombreCrearCuneta"><b>¿Ya tienes cuenta?</b></div>
         <div class="crearCuenta">
-                <button onclick="window.location.href='../inicioSesion/index.html'" class="register">Iniciar Sesion</button>
+                <button onclick="window.location.href='/inicioSesion/index.html'" class="register">Iniciar Sesion</button>
         </div>
         <div class="persona1">
-            <img src="../img/negocio.png" class="persona1">
+            <img src="/img/negocio.png" class="persona1">
         </div>
     </div>
-    <script src="../inicioSesion/script.js"></script>
+    <script src="/inicioSesion/script.js"></script>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         if (urlParams.has('error')) {

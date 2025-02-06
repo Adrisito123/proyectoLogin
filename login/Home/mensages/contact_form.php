@@ -1,10 +1,26 @@
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = htmlspecialchars($_POST['email']);
+    $comentario = htmlspecialchars($_POST['comentario']);
+    
+    // Almacenar el mensaje en un archivo de texto
+    $file = fopen("messages.txt", "a");
+    fwrite($file, "Correo Electrónico: $email\nComentario: $comentario\n\n");
+    fclose($file);
+    
+    // Devolver una respuesta JSON
+    echo json_encode(["status" => "success", "message" => "Mensaje enviado correctamente."]);
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="es-Es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bienvenido</title>
-    <link rel="stylesheet" type="text/css" href="welcome_styles.css">
+    <title>Contacto Recibido</title>
+    <link rel="stylesheet" type="text/css" href="../welcome_styles.css">
 </head>
 <body>
     <header class="cabecera">
@@ -33,25 +49,15 @@
     </header>
     <div class="fondo">
         <div class="contenido">
-            <div class="bienvenida">
-                <h2>Bienvenido a Tienda Sito</h2>
-                <p>En <strong>Tienda Sito</strong>, nos apasiona la tecnología y estamos dedicados a ofrecerte los mejores productos de informática. Nuestra tienda es tu destino único para todo lo relacionado con la informática, incluyendo:</p>
-                <ul>
-                    <li><strong>Ordenadores:</strong> Encuentra una amplia gama de ordenadores de sobremesa y portátiles de las mejores marcas.</li>
-                    <li><strong>Componentes:</strong> Actualiza y mejora tu equipo con nuestros componentes de alta calidad.</li>
-                    <li><strong>Cables:</strong> Todo tipo de cables y adaptadores para tus necesidades de conexión.</li>
-                    <li><strong>Periféricos:</strong> Descubre nuestra selección de teclados, ratones, monitores y más.</li>
-                </ul>
-                <p>Nos especializamos en ofrecer productos de alta calidad a precios competitivos. Nuestro objetivo es proporcionar a nuestros clientes todo lo que necesitan para sus necesidades informáticas.</p>
-                <p>Además, en <strong>Tienda Sito</strong> nos enorgullecemos de nuestro excelente servicio al cliente. Nuestro equipo de expertos está siempre disponible para ayudarte a encontrar el producto perfecto y responder a todas tus preguntas.</p>
-                <p>¡Gracias por elegirnos como tu tienda de informática de confianza!</p>
-            </div>
+            <h2>Gracias por contactarnos</h2>
+            <p><strong>Correo Electrónico:</strong> <?php echo $email; ?></p>
+            <p><strong>Comentario:</strong> <?php echo nl2br($comentario); ?></p>
         </div>
     </div>
     <footer class="cabeceraFinal">
         <div class="contactaNosotros">
             <h2>Contacta con Nosotros</h2>
-            <form id="contactForm" action="contact_form.php" method="post">
+            <form action="contact_form.php" method="post">
                 <label for="email">Correo Electrónico:</label>
                 <input type="email" id="email" name="email" required>
                 <label for="comentario">Comentario:</label>
@@ -61,15 +67,12 @@
                     <input type="reset" value="Borrar">
                 </div>
             </form>
-            <div id="confirmationMessage" class="confirmationMessage" style="display: none;">
-                Mensaje enviado correctamente.
-            </div>
         </div>
     </footer>
     <div id="searchPanel" class="searchPanel">
         <input type="text" id="searchInput" placeholder="Buscar productos...">
         <button id="closeSearchPanel" class="closeSearchPanel">Cerrar</button>
     </div>
-    <script src="welcome_script.js"></script>
+    <script src="../welcome_script.js"></script>
 </body>
 </html>

@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="/inicioSesion/styles.css">
 </head>
 <body>
     <div class="fondo">
         <div class="iniciarSesion">Iniciar Sesión</div>
         <form action="login.php" method="post">
             <div class="usuario">
-                <img src="../img/usuario.png" class="iconoUser">Usuario :    
+                <img src="/img/usuario.png" class="iconoUser">Usuario :    
                 <input type="text" placeholder="Ingrese Usuario" class="user" name="uname" required>
             </div>
             <div class="pass">
-                <img src="../img/candado.png" class="candado">Contraseña :
+                <img src="/img/candado.png" class="candado">Contraseña :
                 <input type="password" placeholder="Ingrese Contraseña" class="contra" name="psw" required>
             </div>
             <div class="enviar">
@@ -27,13 +27,13 @@
         </form>
         <div class="nombreCrearCuneta"><b>¿No tienes una cuenta?</b></div>
         <div class="crearCuenta">
-                <button onclick="window.location.href='../crearCuenta/register.html'" class="register">Crear Cuenta</button>
+                <button onclick="window.location.href='/crearCuenta/register.html'" class="register">Crear Cuenta</button>
         </div>
         <div class="persona1">
-            <img src="../img/negocio.png" class="persona1">
+            <img src="/img/negocio.png" class="persona1">
         </div>
     </div>
-    <script src="script.js"></script>
+    <script src="/inicioSesion/script.js"></script>
     <script>
         const urlParams = new URLSearchParams(window.location.search);
         if (urlParams.has('error')) {

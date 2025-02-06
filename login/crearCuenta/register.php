@@ -25,7 +25,7 @@ if ($uname && $psw) {
 
     if ($result->num_rows > 0) {
         // Usuario ya existe
-        header("Location: register.html?error=exists");
+        header("Location: /crearCuenta/register.html?error=exists");
         exit();
     } else {
         // Usuario no existe, crear cuenta
@@ -35,7 +35,7 @@ if ($uname && $psw) {
         // Ejecutar la consulta
         if ($stmt->execute()) {
             // Redirigir al index.html para iniciar sesión
-            header("Location: ../inicioSesion/index.html?success=1");
+            header("Location: /inicioSesion/index.html?success=1");
             exit();
         } else {
             echo "Error: " . $stmt->error;

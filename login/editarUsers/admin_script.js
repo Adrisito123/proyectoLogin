@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     loadUsers();
 
     function loadUsers() {
-        fetch('view_users.php')
+        fetch('/editarUsers/view_users.php')
             .then(response => response.json())
             .then(data => {
                 const usersTable = document.querySelector('#usersTable tbody');
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.editUser = function(id) {
         const newUsername = prompt('Ingrese el nuevo nombre de usuario:');
         if (newUsername) {
-            fetch(`edit_user.php?id=${id}&user=${newUsername}`)
+            fetch(`/editarUsers/edit_user.php?id=${id}&user=${newUsername}`)
                 .then(response => response.text())
                 .then(data => {
                     alert(data);
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.deleteUser = function(id) {
         if (confirm('¿Está seguro de que desea eliminar este usuario?')) {
-            fetch(`delete_user.php?id=${id}`)
+            fetch(`/editarUsers/delete_user.php?id=${id}`)
                 .then(response => response.text())
                 .then(data => {
                     alert(data);

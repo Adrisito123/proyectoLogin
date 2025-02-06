@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es-Es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda</title>
+    <link rel="stylesheet" type="text/css" href="tienda_styles.css">
+</head>
+<body>
+    <header class="cabecera">
+        <div class="left-section">
+            <button id="menuInicio" class="menuInicio">
+                <img src="../img/hogar.png" alt="Inicio" class="iconoHogar">
+            </button>
+            <button id="menuBusqueda" class="menuBusqueda">
+                <img src="../img/busqueda.png" alt="Buscar" class="iconoBusqueda">
+            </button>
+        </div>
+        <div class="center-section">
+            <h1>Tienda</h1>
+        </div>
+    </header>
+    <div class="fondo">
+        <div class="contenido">
+            <h2>Productos Destacados</h2>
+            <div class="productos">
+                <button class="producto" onclick="verProducto('producto1')">
+                    <img src="../tienda/imgProdcutos/portatil.png" alt="Producto 1">
+                    <h3>Ordenador Portátil XYZ</h3>
+                    <p>Potente ordenador portátil con procesador Intel i7 y 16GB de RAM.</p>
+                    <p><strong>Precio: $999.99</strong></p>
+                </button>
+                <button class="producto" onclick="verProducto('producto2')">
+                    <img src="../tienda/imgProdcutos/monitor.png" alt="Producto 2">
+                    <h3>Monitor 4K Ultra HD</h3>
+                    <p>Monitor de 27 pulgadas con resolución 4K y tecnología IPS.</p>
+                    <p><strong>Precio: $399.99</strong></p>
+                </button>
+                <button class="producto" onclick="verProducto('producto3')">
+                    <img src="../tienda/imgProdcutos/tecladoRgb.png" alt="Producto 3">
+                    <h3>Teclado Mecánico RGB</h3>
+                    <p>Teclado mecánico con retroiluminación RGB y switches Cherry MX.</p>
+                    <p><strong>Precio: $129.99</strong></p>
+                </button>
+                <button class="producto" onclick="verProducto('producto4')">
+                    <img src="../tienda/imgProdcutos/grafica3080.png" alt="Producto 4">
+                    <h3>Tarjeta Gráfica GTX 3080</h3>
+                    <p>Tarjeta gráfica de alto rendimiento con 10GB de memoria GDDR6X.</p>
+                    <p><strong>Precio: $699.99</strong></p>
+                </button>
+                <button class="producto" onclick="verProducto('producto5')">
+                    <img src="../tienda/imgProdcutos/discoDuro.png" alt="Producto 5">
+                    <h3>Disco Duro SSD 1TB</h3>
+                    <p>Disco duro SSD de 1TB con velocidades de lectura/escritura ultrarrápidas.</p>
+                    <p><strong>Precio: $149.99</strong></p>
+                </button>
+                <button class="producto" onclick="verProducto('producto6')">
+                    <img src="../tienda/imgProdcutos/raton.png" alt="Producto 6">
+                    <h3>Ratón Gaming XYZ</h3>
+                    <p>Ratón gaming con sensor óptico de alta precisión y botones programables.</p>
+                    <p><strong>Precio: $59.99</strong></p>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div id="searchPanel" class="searchPanel">
+        <input type="text" id="searchInput" placeholder="Buscar productos...">
+        <button id="closeSearchPanel" class="closeSearchPanel">Cerrar</button>
+    </div>
+    <script src="tienda_script.js"></script>
+</body>
+</html>
